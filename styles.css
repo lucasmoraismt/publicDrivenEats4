@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-family: Roboto;
+}
+
+a {
+    text-decoration: none
+}
+
+body {
+    background: #e5e5e5;
+}
+
+header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 92px;
+    background: #cf2b2b;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+    padding-left: 21px;
+    color: #ffffff;
+}
+
+h1 {
+    padding-top: 8px;
+    padding-left: 21px;
+    font-size: 44px;
+    line-height: 55px;
+    color: #ffffff;
+    font-family: Righteous;
+}
+
+h2 {
+    color: #333333;
+    font-size: 26px;
+    line-height: 32px;
+    font-family: Righteous;
+}
+
+footer {
+    width: 100%;
+    height: 92px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
+
+main {
+    padding-top: 123px;
+    padding-bottom: 92px;
+    padding-left: 19px;
+}
+
+.fechar-pedido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 61px;
+    width: 90%;
+    border-radius: 50px;
+    background: #CBCBCB;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    font-family: Roboto;
+}
+
+.fechar-pedido p {
+    max-width: 200px;
+}
+
+.comidas,
+.bebidas,
+.sobremesas {
+    display: flex;
+    overflow-x: scroll
+}
+
+.bebidas p,
+.sobremesas p {
+    margin-bottom: 9px;
+}
+
+.produto {
+    margin-top: 17px;
+    margin-right: 16px;
+    margin-bottom: 27px;
+    min-height: 216px;
+    min-width: 172px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    position: relative;
+}
+
+img {
+    margin-top: 18px;
+    height: 87px;
+    width: 144px;
+    border-radius: 4px;
+}
+
+.imagem-produto {
+    display: flex;
+    justify-content: center;
+}
+
+.nome-produto {
+    margin-top: 8px;
+    margin-left: 14px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.descricao-produto {
+    margin-top: 4px;
+    margin-left: 14px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #A6A6A6;
+    max-width: 144px;
+}
+
+.valor-produto {
+    margin-top: 5px;
+    margin-left: 14px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.selecionado {
+    border: 5px solid #32B72F;
+}
+
+ion-icon {
+    color: #32B72F;
+    position: absolute;
+    right: 7px;
+    bottom: 6px;
+    display: none;
+}
+
+.com-icone {
+    display: inline-block;
+}
+
+.finalizar-pedido {
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    min-width: 377px;
+    min-height: 353px;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 21px;
+}
+
+.finalizar-pedido p {
+    font-size: 22px;
+    color: #FFFFFF;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+}
+
+.bloco-finalizar {
+    position: fixed;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.9);
+    min-width: 100%;
+    min-height: 100%;
+    display: none;
+    overflow: hidden;
+    top: 0;
+}
+
+.container-confirma-produtos {
+    margin-top: 28px;
+}
+
+.confirma-sobremesa,
+.confirma-bebida,
+.confirma-comida,
+.valor-total {
+    display: flex;
+    justify-content: space-between;
+    min-width: 303px;
+    margin-bottom: 14px;
+}
+
+.botao-pode-pedir {
+    margin-top: 25px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    width: 329px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-pode-pedir p {
+    color: #50D074
+}
+
+.botao-cancelar {
+    width: 333px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

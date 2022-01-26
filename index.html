@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>DrivenEats</title>
+</head>
+
+<body>
+    <div data-identifier="confirmation-dialog" class="bloco-finalizar">
+        <div class="finalizar-pedido">
+            <p><b>Confirme seu pedido</b></p>
+            <div class="container-confirma-produtos">
+                <div class="confirma-comida">
+                    <p class="comida-final">Frango Yin Yang</p>
+                    <p class="valor-comida">14,90</p>
+                </div>
+                <div class="confirma-bebida">
+                    <p class="bebida-final">Coquinha gelada</p>
+                    <p class="valor-bebida">4,90</p>
+                </div>
+                <div class="confirma-sobremesa">
+                    <p class="sobremesa-final">Pudim</p>
+                    <p class="valor-sobremesa">7,90</p>
+                </div>
+                <div class="valor-total">
+                    <p><b>Total</b></p>
+                    <p class="valor-total-final"><b>7,90</b></p>
+                </div>
+                <div class="botao-pode-pedir" onclick="pedirComida()">
+                    <p>Tudo certo, pode pedir!</p>
+                </div>
+                <div class="botao-cancelar" onclick="fecharConfirmacao()">
+                    <p>Cancelar</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <header>
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+
+    </header>
+    <main>
+
+        <h2>Primeiro, seu prato</h2>
+        <div data-identifier="dishes" class="comidas">
+            <div data-identifier="food-option" class="produto" onclick="selecionarComida(this)">
+                <div class="imagem-produto">
+                    <img src="pratos/alaminuta.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>A la minuta</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Arroz, batata, bife, ovo, salada</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 17,50</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarComida(this)">
+                <div class="imagem-produto">
+                    <img src="pratos/bifeparmegiana.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Bife Parmegiana</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Bife, quatro queijos e molho</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 20,50</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarComida(this)">
+                <div class="imagem-produto">
+                    <img src="pratos/lasanha.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Lasanha</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Lasanha strogonoff com bacoon</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 11,50</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarComida(this)">
+                <div class="imagem-produto">
+                    <img src="pratos/feijoada.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Feijoada</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Feijão, carne, linguiça e uma laranjinha</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 19,99</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+
+        </div>
+        <h2>Agora, sua bebida</h2>
+        <div data-identifier="drinks" class="bebidas">
+            <div data-identifier="food-option" class="produto" onclick="selecionarBebida(this)">
+                <div class="imagem-produto">
+                    <img src="Bebidas/guarana.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Guarana</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Guarana 350ml</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 3,80</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarBebida(this)">
+                <div class="imagem-produto">
+                    <img src="Bebidas/cocacola.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Coca-Cola</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Coca-Cola 350ml</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 4,90</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarBebida(this)">
+                <div class="imagem-produto">
+                    <img src="Bebidas/pepsi.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Pepsi</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Pepsi 1 litro</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 8,99</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarBebida(this)">
+                <div class="imagem-produto">
+                    <img src="Bebidas/fantauva.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Fanta uva</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Fanta uva 350ml</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 6,50</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+        </div>
+        <h2>Por fim, sua sobremesa</h2>
+        <div data-identifier="desserts" class="sobremesas">
+            <div data-identifier="food-option" class="produto" onclick="selecionarSobremesa(this)">
+                <div class="imagem-produto">
+                    <img src="Sobremesa/ambrosia.png">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Ambrosia</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Leita, açucar e cravo</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 7,50</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarSobremesa(this)">
+                <div class="imagem-produto">
+                    <img src="Sobremesa/musse.png">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Musse de chocolate</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Musse e chocolate</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 6,99</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarSobremesa(this)">
+                <div class="imagem-produto">
+                    <img src="Sobremesa/pudim.jpg">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Pudim</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Somente um pudim</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 8,30</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+            <div data-identifier="food-option" class="produto" onclick="selecionarSobremesa(this)">
+                <div class="imagem-produto">
+                    <img src="Sobremesa/sorvete.png">
+                </div>
+                <div data-identifier="food-title" class="nome-produto">
+                    <p>Sorvete</p>
+                </div>
+                <div class="descricao-produto">
+                    <p>Sorvete de creme</p>
+                </div>
+                <div data-identifier="food-price" class="valor-produto">
+                    <p>R$ 9,10</p>
+                </div>
+                <ion-icon class="icone" name="checkmark-circle"></ion-icon>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="fechar-pedido" onclick="finalizarPedido()">
+            <p>Selecione os 3 itens para fechar o pedido</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
